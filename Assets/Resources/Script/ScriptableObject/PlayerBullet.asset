@@ -17,6 +17,6 @@ MonoBehaviour:
   description: Player basic bullet.
   health: 1
   speed: 700
-  hitPower: 0
+  hitPower: 1
   actor: {fileID: 8505114360084312946, guid: 383798b2c67f4dc48bc612392cec02b4, type: 3}
   actorBullets: {fileID: 0}
