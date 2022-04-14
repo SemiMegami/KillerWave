@@ -30,6 +30,11 @@ public class GameManager : MonoBehaviour
         LightAndCameraSetup(currentScene);
     }
 
+    private void Start()
+    {
+        SetliveDisplay(playerLives);
+    }
+
     void CheckGameManagerIsInTheScene()
     {
 
@@ -88,6 +93,28 @@ public class GameManager : MonoBehaviour
         {
             playerLives = 3;
             GetComponent<ScenesManager>().GameOver();
+        }
+    }
+
+    public void SetliveDisplay(int players)
+    {
+        if (GameObject.Find("lives"))
+        {
+            GameObject lives = GameObject.Find("lives");
+            for(int i = 0; i < 5; i++)
+            {
+                GameObject life = GameObject.Instantiate(Resources.Load("Prefab/life")) as GameObject;
+                life.transform.SetParent(lives.transform);
+            }
+
+            for(int i = 0; i < lives.transform.childCount; i++)
+            {
+                lives.transform.GetChild(i).localScale = new Vector3(1, 1, 1);
+            }
+            for (int i = 0; i < lives.transform.childCount - players; i++)
+            {
+                lives.transform.GetChild(lives.transform.childCount - i - 1).localScale = Vector3.zero;
+            }
         }
     }
 }

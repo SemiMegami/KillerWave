@@ -22,6 +22,10 @@ public class ScenesManager : MonoBehaviour
     }
     // Start is called before the first frame update
 
+    private void Start()
+    {
+        SceneManager.sceneLoaded += OnsceneLoaded;
+    }
     private void Update()
     {
         if(curentSceneNumber != SceneManager.GetActiveScene().buildIndex)
@@ -88,6 +92,11 @@ public class ScenesManager : MonoBehaviour
         gameEnding = false;
         gameTimer = 0;
         SceneManager.LoadScene(GameManager.currentScene + 1);
+    }
+
+    void OnsceneLoaded(Scene aScene, LoadSceneMode aMode)
+    {
+        GetComponent<GameManager>().SetliveDisplay(GameManager.playerLives);
     }
 
 }
