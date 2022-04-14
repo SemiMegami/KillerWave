@@ -16,16 +16,7 @@ public class ScenesManager : MonoBehaviour
         gameOver
     }
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
 
     public void ResetScene()
     {

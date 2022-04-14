@@ -4850,6 +4850,7 @@ GameObject:
   - component: {fileID: 1005186125}
   - component: {fileID: 3867476600129828256}
   - component: {fileID: 2614386283188289755}
+  - component: {fileID: 3159361537874650389}
   m_Layer: 8
   m_Name: player_ship
   m_TagString: Player
@@ -4879,7 +4880,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9005161152672933216}
-  m_Mesh: {fileID: 4300000, guid: 7b5b3b1fee00e9c4ebfbe199f640a655, type: 3}
+  m_Mesh: {fileID: 4300000, guid: ba5be836618bbf445be7e02ef8eb9a17, type: 3}
 --- !u!23 &9005161152670677920
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4899,7 +4900,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ee098c2d6e57ba74dbf3272c7dc90a97, type: 2}
+  - {fileID: 2100000, guid: 6a4d4714fa6e8aa48aadefaa49cdf2e7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5024,3 +5025,15 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &3159361537874650389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9005161152672933216}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ef9f4288cbfb3043a270b4f16f1d603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
