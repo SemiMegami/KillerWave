@@ -195,6 +195,7 @@ public class PlayerShipBuild : MonoBehaviour
             }
             DontDestroyOnLoad(playerShip);
         }
-        UnityEngine.SceneManagement.SceneManager.LoadScene("TestLevel");
+      //  UnityEngine.SceneManagement.SceneManager.LoadScene("TestLevel");
+        GameManager.Instance.GetComponent<ScenesManager>().BeginGame(GameManager.gameLevelScene);
     }
 }

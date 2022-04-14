@@ -66,10 +66,9 @@ public class GameManager : MonoBehaviour
     {
         switch (sceneNumber)
         {
-            case 3: // testLevel
-            case 4: // level1
-            case 5: // level2
-            case 6: // level3
+            case 3: // level1
+            case 4: // level2
+            case 5: // level3
                 CameraSetup();
                 LightSetUp();
                 break;
