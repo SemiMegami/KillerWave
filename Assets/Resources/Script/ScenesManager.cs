@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 public class ScenesManager : MonoBehaviour
 {
 
@@ -96,7 +98,13 @@ public class ScenesManager : MonoBehaviour
 
     void OnsceneLoaded(Scene aScene, LoadSceneMode aMode)
     {
+        print("loaded");
         GetComponent<GameManager>().SetliveDisplay(GameManager.playerLives);
+
+        if (GameObject.Find("score"))
+        {
+            GameObject.Find("score").GetComponent<Text>().text =  ScoreManager.playerScore.ToString();
+        }
     }
 
 }

@@ -32,7 +32,7 @@ public class PlayerSpawner : MonoBehaviour
         {
             playerShip = GameObject.Find("UpgradedShip");
         }
-        playerShip.transform.rotation = Quaternion.Euler(0, 180, 0);
+        playerShip.transform.rotation = Quaternion.Euler(-90, 180, 0);
         playerShip.transform.localScale = new Vector3(60, 60, 60);
         playerShip.name = "Player";
         playerShip.transform.SetParent(this.transform);

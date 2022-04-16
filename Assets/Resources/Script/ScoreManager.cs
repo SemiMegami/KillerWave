@@ -1,8 +1,8 @@
 using UnityEngine;
-
+using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
-    static int playerScore;
+    public static int playerScore;
 
     public int PlayerScore
     {
@@ -12,24 +12,22 @@ public class ScoreManager : MonoBehaviour
         }
     }
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+   
     public void SetScore(int incomingScore)
     {
         playerScore += incomingScore;
+        if (GameObject.Find("score"))
+        {
+            GameObject.Find("score").GetComponent<Text>().text = playerScore.ToString();
+        }
     }
 
     public void ResetScore()
     {
-        playerScore = 0;
+        playerScore = 00000000;
+        if (GameObject.Find("score"))
+        {
+            GameObject.Find("score").GetComponent<Text>().text = playerScore.ToString();
+        }
     }
 }
