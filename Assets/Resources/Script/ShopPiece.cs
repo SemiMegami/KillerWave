@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class ShopPiece : MonoBehaviour
 {
     [SerializeField]
@@ -15,14 +15,15 @@ public class ShopPiece : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        if(GetComponentInChildren<SpriteRenderer>() != null)
+        if(transform.GetChild(3).GetComponent<Image>()!= null)
         {
-            GetComponentInChildren<SpriteRenderer>().sprite = shopSelection.icon;
+            transform.GetChild(3).GetComponent<Image>().sprite = shopSelection.icon;
+            if (transform.Find("itemText"))
+            {
+                GetComponentInChildren<Text>().text = shopSelection.cost.ToString();
+            }
         }
-        if (transform.Find("itemText"))
-        {
-            GetComponentInChildren<TextMesh>().text = shopSelection.cost;
-        }
+       
     }
 
     // Update is called once per frame
